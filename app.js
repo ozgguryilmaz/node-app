@@ -12,8 +12,12 @@
 
 const http = require('http');
 
-http.createServer = http.createServer((req, res) =>{
+const server = http.createServer = http.createServer((req, res) =>{
+    console.log('INCOMING REQUEST');
+    console.log(req.method, req.url);
 
+    res.end('Success!')
+    
 });
-
+ 
 server.listen(5000);
